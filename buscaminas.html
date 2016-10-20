@@ -5,8 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/buscaminas.css">
+  <script src="./js/jquery.min.js" charset="utf-8"></script>
+  <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="./js/buscaminas.js" charset="utf-8"></script>
 </head>
 <body>
+  <div id="buscaminas" class="col-md-8">
+    <section id="nivel">
+      <button id="principiante" type="button" onclick="nivel('principiante')" class="btn btn-success">Inicial</button>
+      <button id="medio" type="button" onclick="nivel('medio')" class="btn btn-success">Intermedio</button>
+      <button id="avanzado" type="button" onclick="nivel('avanzado')" class="btn btn-success">Avanzado</button>
+    </section>
 
+    <ul id="game">
+
+    </ul>
+
+  </div>
 </body>
 </html>
