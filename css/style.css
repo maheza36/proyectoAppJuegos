@@ -1,0 +1,21 @@
+.padding-div{
+  padding: 10px;
+}
+.score{
+  position: absolute;
+  top: 0;
+  left: 56%;
+  background: blue;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  z-index: 0;
+}
+.img{
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+}
