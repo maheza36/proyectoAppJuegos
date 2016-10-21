@@ -1,0 +1,7 @@
+#buscaminas > ul > button {
+  height: 34px;
+  width: 40px;
+  background-color: white;
+  text-align: center;
+  margin: 1px;
+}
