@@ -3,19 +3,45 @@
 }
 .score{
   position: absolute;
-  top: 0;
-  left: 56%;
-  background: blue;
+    top: 25%;
+    left: 89%;
+    background: #29A0CD;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    z-index: 0;
+    /* display: inline-block; */
+}
+
+.score-xs{
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  background: #29A0CD;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   text-align: center;
-  line-height: 50px;
+  line-height: 30px;
   color: white;
   z-index: 0;
+  font-size: 10px;
 }
+
 .img{
   border-radius: 50%;
   z-index: 1;
   position: relative;
+}
+.content{
+  height: auto;;
+  width: auto;
+  display: inline-block;
+  position: relative;
+}
+.btn{
+  min-height: 3em;
 }

@@ -16,25 +16,36 @@
   <section id="gamers">
     <div class="row">
       <div class="col-xs-12">
-        <div class="col-xs-6 padding-div">
-          <div class="col-md-offset-3 col-xs-offset-3 padding-div">
-            <img class="img-circle img-responsive" src="./img/Bart.jpg"
-            alt="Bart" >
-          </div>
+        <div id="player1" class="col-xs-6 padding-div">
+            <div class="content col-md-offset-3 col-xs-offset-3 col-md-3 col-xs-3 padding-div">
+              <img class="img-circle img-responsive " src="./img/Bart.jpg"
+              alt="Bart" >
+              <span class="hidden-xs score " data-toggle="tooltip" title="Score">
+                <p>0</p>
+              </span>
+              <span class="visible-xs score-xs " data-toggle="tooltip" title="Score">
+                <p>0</p>
+              </span>
+            </div>
+          <!--label for="game1">Game 1:</label-->
+          <input type="text" name="game1" placeholder="Gamer 1" class="form-control">
+        </div>
+        <div id="player2" class="col-xs-6 padding-div">
+            <div class="content col-md-offset-3 col-xs-offset-3 col-md-3 col-xs-3 padding-div">
+              <img class="img-circle img-responsive " src="./img/winry.png"
+              alt="Winry" >
+              <span class="hidden-xs score " data-toggle="tooltip" title="Score">
+                <p>0</p>
+              </span>
+              <span class="visible-xs score-xs " data-toggle="tooltip" title="Score">
+                <p>0</p>
+              </span>
+            </div>
           <!--label for="game1">Game 1:</label-->
           <input type="text" name="game1" placeholder="Gamer 1"
           class="form-control">
         </div>
-        <div class="col-xs-6 padding-div">
-          <div class="col-md-offset-3 col-xs-offset-3 padding-div">
-            <img class="img-circle img-responsive img" src="./img/winry.png"
-            alt="Bart">
-            <p class="score">2</p>
-          </div>
-          <!--label for="game2">Game 2:</label-->
-          <input type="text" name="game2" placeholder="Gamer 2"
-          class="form-control">
-        </div>
+
       </div>
     </div>
   </section>
@@ -48,17 +59,20 @@
   <section id="game-panel">
     <div class="row">
       <div class="col-md-offset-3 col-xs-offset-3 col-md-6 col-xs-6">
-          <button class="btn btn-default col-md-4 col-xs-4">1</button>
-          <button class="btn btn-default col-md-4  col-xs-4">2</button>
-          <button class="btn btn-default col-md-4  col-xs-4">3</button>
-          <button class="btn btn-default col-md-4  col-xs-4">4</button>
-          <button class="btn btn-default col-md-4  col-xs-4">5</button>
-          <button class="btn btn-default col-md-4  col-xs-4">6</button>
-          <button class="btn btn-default col-md-4  col-xs-4">7</button>
-          <button class="btn btn-default col-md-4  col-xs-4">8</button>
-          <button class="btn btn-default col-md-4  col-xs-4">9</button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="0"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="1"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="2"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="0"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="1"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="2"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="0"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="1"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="2"></button>
       </div>
     </div>
+  </section>
+  <section id="status-game">
+    <p class="status"></p>
   </section>
 </section>
 </body>
