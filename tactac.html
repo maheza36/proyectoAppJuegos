@@ -42,7 +42,7 @@
               </span>
             </div>
           <!--label for="game1">Game 1:</label-->
-          <input type="text" name="game1" placeholder="Gamer 1"
+          <input type="text" name="game2" placeholder="Gamer 2"
           class="form-control">
         </div>
 
@@ -52,25 +52,32 @@
   <div class="row">
     <div class="col-xs-9 col-md-11 col-lg-11">
       <div class="col-md-offset-6 col-xs-offset-6 col-lg-offset-6 padding-div">
-        <button class="btn btn-default padding-div">Start Game</button>
+        <button id="start-game" class="btn btn-default padding-div">Start Game</button>
       </div>
     </div>
   </div>
   <section id="game-panel">
     <div class="row">
       <div class="col-md-offset-3 col-xs-offset-3 col-md-6 col-xs-6">
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="0"></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="1"></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="2"></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="0"></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="1"></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="2"></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="0"></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="1"></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="2"></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="0" disabled></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="1" disabled></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="2" disabled></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="0" disabled></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="1" disabled></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="2" disabled></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="0" disabled></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="1" disabled></button>
+          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="2" disabled></button>
       </div>
     </div>
   </section>
+  <div class="row">
+    <div class="col-xs-9 col-md-11 col-lg-11">
+      <div class="col-md-offset-6 col-xs-offset-6 col-lg-offset-6 padding-div">
+        <button id="reset-game" class="btn btn-default padding-div">Reset Game</button>
+      </div>
+    </div>
+  </div>
   <section id="status-game">
     <p class="status"></p>
   </section>
