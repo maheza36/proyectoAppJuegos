@@ -1,0 +1,75 @@
+*{
+  border: 0,
+  margin:0;
+  padding:0;
+}
+
+body{
+  background: : #ccc;
+}
+
+#contenedor{
+  background: black;
+  height: 1050px;
+  width: 780px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+header, #banner, #noticias, #tienda, #marcas{
+  background: #fff;
+  height: 100px;
+  width: 780px;
+}
+#banner{
+  background: #666;
+  height: 300px;
+  width: 780px;
+
+}
+#noticias{
+  background: black;
+  height: 225px;
+  width: 760px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  text-align: center;
+
+}
+
+#tienda{
+  background: #666;
+  height: 180px;
+
+}
+#marcas{
+  background: #fff;
+  height: 100px;
+
+}
+footer{
+  background: #f21;
+  height: 60px;
+  width: 780px;
+
+}
+#noticias #noticia1{
+  background: #999;
+  width: 250px;
+  height: 215px;
+  display: inline-block;
+}
+#noticias #noticia2{
+  background: #124EB0;
+  width: 250px;
+  height: 215px;
+  display: inline-block;
+}
+#noticias #noticia3{
+  background: #f98e13;
+  width: 250px;
+  height: 215px;
+  display: inline-block;
+}

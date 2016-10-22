@@ -4,9 +4,12 @@ $(document).ready(function(){
 });
 var status_game1;
 var status_game2;
+var game1_name;
+var game2_name;
 const gamer1 = "X";
 const gamer2 = "O";
 var game={};//new Object();
+game.mark_count = 0;
 game.turn = gamer1; //takes values beetwen 0 and 1, if 0 turn of x, if 1 turn of O
 game.over = false; //edita quien gana y pierde
 game.winner = null;
@@ -34,9 +37,9 @@ game.checkWinner = function(){
   //check rows
   game.board.forEach(function(row){
     if(row[0].textContent === row[1].textContent &&
-      row[1].textContent === row[2].textContent &&
-      row[0].textContent && row[0].textContent !== ''){
-        game.winner = row[0].textContent;
+       row[1].textContent === row[2].textContent &&
+       row[0].textContent && row[0].textContent !== ''){
+       game.winner = row[0].textContent;
       }
     });
     //check columns
@@ -65,8 +68,6 @@ game.checkWinner = function(){
     }
     //imprime el ganador
     if(game.winner !==null){
-      console.log("ganador");
-      console.log(game.winner);
       if(game.winner === "X"){
         status_game1[0].textContent = parseInt(status_game1[0].textContent) + 1;
         status_game1[1].textContent = parseInt(status_game1[1].textContent) + 1;
@@ -75,6 +76,9 @@ game.checkWinner = function(){
         status_game2[1].textContent = parseInt(status_game2[1].textContent) + 1;
       }
       alert("gano " + game.winner);
+    }else if(game.mark_count === 9){
+      alert("Empate!!!");
+      game.clearBoard();
     }
     //final de validación de casillas jugadas
   };
@@ -88,7 +92,7 @@ game.checkWinner = function(){
           cell.textContent="";
           cell.style.background ="#fff";
           game.winner = null;
-          console.log(game.winner);
+
         });
       });
     }
@@ -116,6 +120,8 @@ game.checkWinner = function(){
           if(cell.textContent !== "" || game.winner !== null){ //valida que esa posición no se halla jugado
             return;
           }
+
+          game.mark_count++;
           //valida el jugador que tiene el turno
           if(game.turn === gamer1){
             cell.textContent=game.turn; //agrega el contenido del jugador
@@ -133,11 +139,29 @@ game.checkWinner = function(){
           }
           //invoca el siguiente turno
           if(game.nextTurn() === gamer1){
-            player_info[0].textContent="Juega gamer1"; //cambia el jugador correspondiente
+            player_info[0].textContent="Juega " + game1_name.toUpperCase(); //cambia el jugador correspondiente
           }else {
-            player_info[0].textContent="Juega gamer2"; //cambia el jugador correspondiente
+            player_info[0].textContent="Juega " + game2_name.toUpperCase(); //cambia el jugador correspondiente
           }
         });
       });
+    });
+    //validar que los nombres no sean vacios y habilitar el tablero
+    document.getElementById("start-game").addEventListener("click",function(){
+      game1_name = document.getElementsByName("game1")[0].value;
+      game2_name = document.getElementsByName("game2")[0].value;
+      if(game1_name==="" || game2_name ===""){
+        alert("Los Nombres de los jugadores no pueden ser vacios");
+      }else {
+        for(i=0;i<row0.length;i++){
+          row0[i].removeAttribute("disabled");
+        }
+        for(i=0;i<row1.length;i++){
+          row1[i].removeAttribute("disabled");
+        }
+        for(i=0;i<row2.length;i++){
+          row2[i].removeAttribute("disabled");
+        }
+      }
     });
   });
