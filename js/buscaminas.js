@@ -41,7 +41,7 @@ juego.cargar=function(){
       var casilla = document.createElement("button");
       casilla.setAttribute("type","button");
       casilla.setAttribute("class","btn btn-default");
-      casilla.setAttribute("id","casilla"+i+j);
+      casilla.setAttribute("id","casillaF"+i+"C"+j);
       juego.board[i].push(casilla);
       grilla.appendChild(casilla);
     }
@@ -51,11 +51,10 @@ juego.cargar=function(){
 
 function marcar(x,y){
   var casilla;
-  if (x>=0 && x<=filas-1 && y>=0 && y<=columnas-1){
-    if (Number(juego.board[x][y].textContent)>=0){
-      //juego.board[x][y].text++;
-      casilla=document.querySelector("#casilla"+x+y+"");
-      casilla.textContent+=1;
+  if (x>=0 && x<=columnas-1 && y>=0 && y<=filas-1){
+    casilla=document.querySelector("#casillaF"+x+"C"+y);
+    if (casilla.querySelector(".glyphicon")===null){
+      casilla.textContent=Number(casilla.textContent)+1;
     }
   }
 }
@@ -63,27 +62,26 @@ function marcar(x,y){
 juego.PonerMinas=function(){
   var i=0;
   var casilla;
+  var col;
+  var fil;
   for(i=0;i<minas;i++){
     var contenido=document.createElement("span");
     do{
-      var col=(Math.floor(Math.random() * (columnas)));
-      var fil=(Math.floor(Math.random() * (filas)));
-      casilla=document.querySelector("#casilla"+fil+col+"");
-      console.log(casilla);
-      /*marcar(fil-1,col-1);
-      marcar(fil-1,col);
-      marcar(fil-1,col+1);
-      marcar(fil,col-1);
-      marcar(fil,col+1);
-      marcar(fil+1,col-1);
-      marcar(fil+1,col);
-      marcar(fil+1,col+1);*/
+      col=(Math.floor(Math.random() * (columnas)));
+      fil=(Math.floor(Math.random() * (filas)));
+      casilla=document.querySelector("#casillaF"+fil+"C"+col);
     }while(casilla.hasChildNodes());
     casilla.appendChild(contenido);
     contenido.setAttribute("class","glyphicon glyphicon-certificate");
+    marcar(fil-1,col-1);
+    marcar(fil-1,col);
+    marcar(fil-1,col+1);
+    marcar(fil,col-1);
+    marcar(fil,col+1);
+    marcar(fil+1,col-1);
+    marcar(fil+1,col);
+    marcar(fil+1,col+1);
     //contenido.style.display="none";
-
-
   }
 
   console.log(juego.board);
