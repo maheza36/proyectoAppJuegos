@@ -1,75 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz');
 *{
-  border: 0,
-  margin:0;
-  padding:0;
+  box-sizing: border-box;
 }
 
+img{
+  display: block;
+  max-width: 100%;
+}
 body{
-  background: : #ccc;
+  font-family: 'Open Sans', sans-serif;
 }
 
-#contenedor{
-  background: black;
-  height: 1050px;
-  width: 780px;
-  margin-right: auto;
-  margin-left: auto;
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 1.5;
 }
 
-header, #banner, #noticias, #tienda, #marcas{
-  background: #fff;
-  height: 100px;
-  width: 780px;
-}
-#banner{
-  background: #666;
-  height: 300px;
-  width: 780px;
-
-}
-#noticias{
-  background: black;
-  height: 225px;
-  width: 760px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  text-align: center;
-
-}
-
-#tienda{
-  background: #666;
-  height: 180px;
-
-}
-#marcas{
-  background: #fff;
-  height: 100px;
-
-}
-footer{
-  background: #f21;
+/*Estilos del Header*/
+.header {
   height: 60px;
-  width: 780px;
-
 }
-#noticias #noticia1{
-  background: #999;
-  width: 250px;
-  height: 215px;
-  display: inline-block;
+.header .contenedor{
+  display: flex;
+  justify-content: space-between;
 }
-#noticias #noticia2{
-  background: #124EB0;
-  width: 250px;
-  height: 215px;
-  display: inline-block;
+.logo, icon-menu {
+  margin:5px;
 }
-#noticias #noticia3{
-  background: #f98e13;
-  width: 250px;
-  height: 215px;
-  display: inline-block;
+.icon-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: #FBA919;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin-left: auto;
+}
+.nav {
+  position: absolute;
+  top:60;
+  left:0;
+  }
+.menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu__link {
+  display: block;
+  padding: 20px;
+  background: #FBA919;
+  text-decoration: none;
+  color: #fff;
+}
+.menu__link:hover{
+  background: white;
+  color: #FBA919;
 }
