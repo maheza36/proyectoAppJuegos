@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,  initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/jquery.min.js" charset="utf-8"></script>
@@ -12,75 +15,128 @@
   <title>TacTacToe</title>
 </head>
 <body>
-<section class="container-fluid">
-  <section id="gamers">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="player1" class="col-xs-6 padding-div">
-            <div class="content col-md-offset-3 col-xs-offset-3 col-md-3 col-xs-3 padding-div">
-              <img class="img-circle img-responsive " src="./img/Bart.jpg"
-              alt="Bart" >
-              <span class="hidden-xs score " data-toggle="tooltip" title="Score">
-                <p>0</p>
-              </span>
-              <span class="visible-xs score-xs " data-toggle="tooltip" title="Score">
-                <p>0</p>
-              </span>
-            </div>
-          <!--label for="game1">Game 1:</label-->
-          <input type="text" name="game1" placeholder="Gamer 1" class="form-control">
-        </div>
-        <div id="player2" class="col-xs-6 padding-div">
-            <div class="content col-md-offset-3 col-xs-offset-3 col-md-3 col-xs-3 padding-div">
-              <img class="img-circle img-responsive " src="./img/winry.png"
-              alt="Winry" >
-              <span class="hidden-xs score " data-toggle="tooltip" title="Score">
-                <p>0</p>
-              </span>
-              <span class="visible-xs score-xs " data-toggle="tooltip" title="Score">
-                <p>0</p>
-              </span>
-            </div>
-          <!--label for="game1">Game 1:</label-->
-          <input type="text" name="game2" placeholder="Gamer 2"
-          class="form-control">
-        </div>
+  <header class="header">
+    <div class="contenedor">
+      <h1 class="logo"> Bienvenidos a Juegos!</h1>
 
-      </div>
+      <span class="icon-menu" id="btn-menu"></span>
+
+      <nav class="nav" id="nav">
+        <ul class="nav">
+          <li class="menu__item"><a class="menu__link select" href="./index.html">Inicio</a></li>
+          <li class="menu__item"><a class="menu__link" href="./index.html">Juegos</a></li>
+            <ul>
+              <li><a href="./tactac.html">Triqui</a></li>
+              <li><a href="./buscaminas.html">Busca Minas</a></li>
+            </ul>
+          <li class="menu__item"><a class="menu__link" href="">Contactos</a></li>
+            <ul>
+              <li><a href="#">Magda Cristancho</a></li>
+              <li><a href="#">Andres Ortiz</a></li>
+              <li><a href="#">Mauricio Hernandez</a></li>
+            </ul>
+        </ul>
+
+      </nav>
     </div>
-  </section>
-  <div class="row">
-    <div class="col-xs-9 col-md-11 col-lg-11">
-      <div class="col-md-offset-6 col-xs-offset-6 col-lg-offset-6 padding-div">
-        <button id="start-game" class="btn btn-default padding-div">Start Game</button>
-      </div>
-    </div>
+  </header>
+<div class= "banner">
+  <img src="img/fondobienvenida2.jpg" alt="" class="banner__img">
+  <div class="contenedor">
+  <h2 class="banner">JUEGOS DIVERTIDOS</h2>
+  <p class="banner_txt"></p>
   </div>
-  <section id="game-panel">
-    <div class="row">
-      <div class="col-md-offset-3 col-xs-offset-3 col-md-6 col-xs-6">
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="0" disabled></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="1" disabled></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="2" disabled></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="0" disabled></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="1" disabled></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="2" disabled></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="0" disabled></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="1" disabled></button>
-          <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="2" disabled></button>
-      </div>
+
+</div>
+
+  <main class="main">
+    <div class="contenedor">
+      <!-- tac tac -->
+      <section class="container-fluid">
+        <section id="gamers">
+          <div class="row">
+            <div class="col-xs-12">
+              <div id="player1" class="col-xs-6 padding-div">
+                  <div class="content col-md-offset-3 col-xs-offset-3 col-md-3 col-xs-3 padding-div">
+                    <img class="img-circle img-responsive " src="./img/Bart.jpg"
+                    alt="Bart" >
+                    <span class="hidden-xs score " data-toggle="tooltip" title="Score">
+                      <p>0</p>
+                    </span>
+                    <span class="visible-xs score-xs " data-toggle="tooltip" title="Score">
+                      <p>0</p>
+                    </span>
+                  </div>
+                <!--label for="game1">Game 1:</label-->
+                <input type="text" name="game1" placeholder="Gamer 1" class="form-control">
+              </div>
+              <div id="player2" class="col-xs-6 padding-div">
+                  <div class="content col-md-offset-3 col-xs-offset-3 col-md-3 col-xs-3 padding-div">
+                    <img class="img-circle img-responsive " src="./img/winry.png"
+                    alt="Winry" >
+                    <span class="hidden-xs score " data-toggle="tooltip" title="Score">
+                      <p>0</p>
+                    </span>
+                    <span class="visible-xs score-xs " data-toggle="tooltip" title="Score">
+                      <p>0</p>
+                    </span>
+                  </div>
+                <!--label for="game1">Game 1:</label-->
+                <input type="text" name="game2" placeholder="Gamer 2"
+                class="form-control">
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-xs-9 col-md-11 col-lg-11">
+            <div class="col-md-offset-6 col-xs-offset-6 col-lg-offset-6 padding-div">
+              <button id="start-game" class="btn btn-default padding-div">Start Game</button>
+            </div>
+          </div>
+        </div>
+        <section id="game-panel">
+          <div class="row">
+            <div class="col-md-offset-3 col-xs-offset-3 col-md-6 col-xs-6">
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="0" disabled></button>
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="1" disabled></button>
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="0" data-x="2" disabled></button>
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="0" disabled></button>
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="1" disabled></button>
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="1" data-x="2" disabled></button>
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="0" disabled></button>
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="1" disabled></button>
+                <button class="btn btn-default col-md-4  col-xs-4" data-y="2" data-x="2" disabled></button>
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-xs-9 col-md-11 col-lg-11">
+            <div class="col-md-offset-6 col-xs-offset-6 col-lg-offset-6 padding-div">
+              <button id="reset-game" class="btn btn-default padding-div">Reset Game</button>
+            </div>
+          </div>
+        </div>
+        <section id="status-game">
+          <p class="status"></p>
+        </section>
+      </section>
+      <!-- fin tactac -->
     </div>
-  </section>
-  <div class="row">
-    <div class="col-xs-9 col-md-11 col-lg-11">
-      <div class="col-md-offset-6 col-xs-offset-6 col-lg-offset-6 padding-div">
-        <button id="reset-game" class="btn btn-default padding-div">Reset Game</button>
-      </div>
+
+  </main>
+  <footer class="footer">
+    <div class="social">
+      <a href="" class="icon-facebook"></a>
+      <a href="" class="icon-twitter"></a>
+      <a href="" class="icon-gplus"></a>
+      <a href="" class="icon-vimeo"></a>
+
     </div>
-  </div>
-  <section id="status-game">
-    <p class="status"></p>
-  </section>
-</section>
+    <p class="&copy; AMM-BootCamp-2-2016 - Todos los derechos reservados"></p>
+
+  </footer>
+  <script type="js/menu.js"></script>
 </body>
 </html>

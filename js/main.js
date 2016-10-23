@@ -92,11 +92,13 @@ game.checkWinner = function(){
           cell.textContent="";
           cell.style.background ="#fff";
           game.winner = null;
-
+          game.mark_count = 0;
         });
       });
     }
   };
+
+
   document.addEventListener("DOMContentLoaded",function(){
     //cargar los puntajes
     status_game1 = document.querySelectorAll("#player1 p");
@@ -162,6 +164,29 @@ game.checkWinner = function(){
         for(i=0;i<row2.length;i++){
           row2[i].removeAttribute("disabled");
         }
+      }
+    });
+    new_game = document.querySelector("#reset-game");
+    new_game.addEventListener("click",function(){
+      console.log("prueba");
+      game.clearBoard();
+      game.turn = gamer1;
+      player_info[0].textContent="";
+      document.getElementsByName("game1")[0].value="";
+      document.getElementsByName("game2")[0].value ="";
+      game.mark_count = 0;
+      status_game1[0].textContent = "0";
+      status_game1[1].textContent = "0";
+      status_game2[0].textContent = "0";
+      status_game2[1].textContent = "0";
+      for(i=0;i<row0.length;i++){
+        row0[i].setAttribute("disabled",true);
+      }
+      for(i=0;i<row1.length;i++){
+        row1[i].setAttribute("disabled",true);
+      }
+      for(i=0;i<row2.length;i++){
+        row2[i].setAttribute("disabled",true);
       }
     });
   });
